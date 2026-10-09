@@ -1,53 +1,53 @@
 # GDG Portal Review & Suggestions Report
 
-**Website URL:** https://gdgcaitr.vercel.app/
-**Reviewed by:** [Aapka Naam Here]
-**Role:** Web Developer Applicant (GDGoC AITR)
+**Website URL:** https://gdgcaitr.vercel.app/  
+**Reviewed by:** Arzoo Khare (`Arzoo800`)  
+**Role:** Web Developer Applicant (GDGoC AITR)  
 
 ---
 
 ## 1. Responsiveness & Visual Inspection
 
 ### Mobile View (375px - 430px screens)
-- **Broken Links:** Checked main navigation and footer links. Found placeholder links (`#`) in social icons/footer that need exact redirection.
-- **Text Alignment:** On smaller screens (e.g., iPhone SE/Android standard), some section headers wrap awkwardly or break across lines.
-- **Layout Overflow:** Slight horizontal scrolling observed in event cards grid on viewports below 360px width.
-- **Navbar/Hamburger Menu:** Mobile menu works, but smooth transition animations can be improved when toggling open/close state.
+- **Broken Links:** Placeholder links (`#`) identified in social icons and footer elements requiring production URL redirection.
+- **Text Alignment:** Section headers experience awkward line breaks on smaller screens (e.g., iPhone SE/Android standard viewports).
+- **Layout Overflow:** Horizontal scrolling observed in the event cards grid on viewports below 360px width.
+- **Navbar/Hamburger Menu:** Mobile menu functions properly, but toggle state transitions can be smoothed with optimized CSS/Framer Motion keyframes.
 
 ### Desktop View (1024px+ screens)
-- **Visual Glitches:** Padding/margin inconsistency between the Hero section and the Upcoming Events section on high-resolution displays (1080p and above).
-- **Asset Loading:** Large banner images on the home page take noticeable time to load (needs optimization like webp format or lazy loading).
+- **Visual Inconsistencies:** Vertical padding/margin mismatch between the Hero and Upcoming Events sections on high-resolution display displays (1080p and above).
+- **Asset Loading:** Large banner images on the hero section cause noticeable render delay (requires WebP conversion and lazy loading).
 
 ---
 
 ## 2. Bugs & Technical Findings
 
-1. **Console Errors/Warnings:** Unused asset warning and missing image fallback if an event image URL fails to load.
-2. **Form Validation:** Input fields in interactive sections allow empty or unvalidated string submissions.
+1. **Console Warnings & Fallbacks:** Unused asset bundle warnings present; missing image fallback handlers when dynamic event image URLs fail to load.
+2. **Form Validation:** Interactive input fields accept empty string submissions without client-side regex or validation checks.
 3. **Accessibility (a11y):**
-   - Certain buttons and icon-only components lack proper `aria-label` attributes for screen readers.
-   - Low contrast ratio on secondary grey text elements in dark mode/theme.
+   - Icon-only interactive elements lack explicit `aria-label` tags for screen reader compatibility.
+   - Low contrast ratio detected on secondary text elements in dark theme.
 
 ---
 
 ## 3. Constructive Suggestions & Feature Improvements
 
 ### Priority 1: Performance & UX
-- **Image Optimization:** Convert png/jpg images to `.webp` format and implement Next.js / React lazy loading (`loading="lazy"`).
-- **SEO & Meta Tags:** Add Open Graph (OG) tags so that links share rich preview cards on WhatsApp, Twitter, and LinkedIn.
-- **Skeleton Loaders:** Add animated skeleton components while fetching events data to improve Perceived Performance.
+- **Image Optimization:** Convert asset pipeline to `.webp` format and leverage Next.js `Image` component or native React `loading="lazy"`.
+- **SEO & Social Cards:** Implement Open Graph (OG) meta tags for preview generation across WhatsApp, LinkedIn, and Twitter.
+- **Perceived Performance:** Implement dynamic skeleton loaders during asynchronous event data fetching operations.
 
-### Priority 2: New Feature Ideas
-- **Interactive Event Calendar:** A filterable month-view calendar showing all past and future GDGoC events.
-- **Member / Contributor Leaderboard:** A section displaying active community members, GitHub contributors, or event badges earned.
-- **Dark/Light Mode Toggle:** Persistent dark/light theme switch saved in `localStorage`.
-- **Search & Filter:** Live search bar on the events page to filter events by category (e.g., Hackathon, Workshop, Tech Talk).
+### Priority 2: Proposed Enhancements
+- **Interactive Event Calendar:** Filterable month-view calendar component organizing past and upcoming GDGoC events.
+- **Contributor & Member Leaderboard:** Showcase active community members, GitHub contributors, and earned digital badges.
+- **Persistent Theme Manager:** LocalStorage-backed Dark/Light mode state switcher.
+- **Search & Categorization:** Live search and filtering system for events based on categories (Hackathon, Workshop, Tech Talk).
 
 ---
 
-## 4. Summary Checklist
+## 4. Audit Summary Checklist
 
-- [x] Tested across Mobile, Tablet, and Desktop screen sizes.
-- [x] Identified layout responsiveness and padding bugs.
-- [x] Documented missing accessibility tags and image performance issues.
-- [x] Provided actionable suggestions for new features and performance gains.
+- [x] Evaluated layout consistency across Mobile, Tablet, and Desktop breakpoints.
+- [x] Identified responsiveness bugs, layout overflows, and spacing issues.
+- [x] Documented accessibility issues and performance bottlenecks.
+- [x] Outlined actionable feature suggestions and optimization targets.
